@@ -20,4 +20,7 @@ describe("Entering a password", function(){
   it("should be false when nothing passed", function(){
     expect(isValid()).toBeFalsy();
   });
+  it("should be false if password is too short", function(){
+    expect(isValid("1Ag_")).toBeFalsy();
+  });
 });
