@@ -20,6 +20,9 @@ function isValid(password){
   else if (password.search(/[0-9]/) === -1) {
     return false;
   }
+   else if (password.search(/[a-z]/) === -1) {
+    return false;
+  }
   else {
   	return true;
   }
