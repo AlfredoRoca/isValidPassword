@@ -8,7 +8,10 @@ function isValid(password){
   else if (typeof(password) === "undefined") {
     return false;
   }
- else if (password.length < 6) {
+  else if (password.length < 6) {
+    return false;
+  }
+  else if (password.indexOf("_") === -1) {
     return false;
   }
   else {
