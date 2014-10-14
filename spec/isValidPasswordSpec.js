@@ -11,6 +11,6 @@ isValid("123456yQ_") --> true
 
 describe("Entering a password", function(){
   it("should be false when empty string", function(){
-    expect(isValid("")).toBeFalsy;
+    expect(isValid("")).toBeFalsy();
   });
 });
