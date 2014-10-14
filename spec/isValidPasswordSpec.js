@@ -10,36 +10,3 @@ isValid("_JYKR23Q") --> false
 
 isValid("123456yQ_") --> true
 */
-
-describe("Entering a wrong password", function(){
-  it("should be false when empty string", function(){
-    expect(isValid("")).toBeFalsy();
-  });
-  it("should be false when Null", function(){
-    expect(isValid(null)).toBeFalsy();
-  });
-  it("should be false when nothing passed", function(){
-    expect(isValid()).toBeFalsy();
-  });
-  it("should be false if password is too short", function(){
-    expect(isValid("1Ag_")).toBeFalsy();
-  });
-  it("should be false if no underscore", function(){
-    expect(isValid("123456Je")).toBeFalsy();
-  });
-  it("should be not valid if there is no capital letter", function(){
-    expect(isValid("123456y_")).toBeFalsy();
-  });
-  it("should be not valid if there is no number", function(){
-    expect(isValid("_JYhgyQ")).toBeFalsy();
-  });
-  it("should be not valid if there is no lower case letter", function(){
-    expect(isValid("_JYKR23Q")).toBeFalsy();
-  });
-});
-
-describe("Entering a valid password", function(){
-  it("should be valid with a proper password", function(){
-    expect(isValid("123456yQ_")).toBeTruthy();
-  });
-});
