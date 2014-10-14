@@ -17,6 +17,9 @@ function isValid(password){
   else if (password.search(/[A-Z]/) === -1) {
     return false;
   }
+  else if (password.search(/[0-9]/) === -1) {
+    return false;
+  }
   else {
   	return true;
   }
