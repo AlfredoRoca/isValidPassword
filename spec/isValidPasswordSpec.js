@@ -17,7 +17,7 @@ describe("Entering a password", function(){
   it("should be false when Null", function(){
     expect(isValid(null)).toBeFalsy();
   });
-  it("should be false whe nothing passed", function(){
+  it("should be false when nothing passed", function(){
     expect(isValid()).toBeFalsy();
   });
 });
