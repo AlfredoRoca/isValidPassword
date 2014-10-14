@@ -6,12 +6,12 @@ isValid("1Ag_") --> false
 isValid("123456Je") --> false 
 isValid("123456y_") --> false 
 isValid("_JYhgyQ") --> false 
-
 isValid("_JYKR23Q") --> false 
+
 isValid("123456yQ_") --> true
 */
 
-describe("Entering a password", function(){
+describe("Entering a wrong password", function(){
   it("should be false when empty string", function(){
     expect(isValid("")).toBeFalsy();
   });
@@ -32,5 +32,14 @@ describe("Entering a password", function(){
   });
   it("should be not valid if there is no number", function(){
     expect(isValid("_JYhgyQ")).toBeFalsy();
+  });
+  it("should be not valid if there is no lower case letter", function(){
+    expect(isValid("_JYKR23Q")).toBeFalsy();
+  });
+});
+
+describe("Entering a valid password", function(){
+  it("should be valid with a proper password", function(){
+    expect(isValid("123456yQ_")).toBeTruthy();
   });
 });
