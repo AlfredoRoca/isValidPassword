@@ -1,6 +1,7 @@
 /* TODO list
 isValid("") --> false
 isValid(null) --> false
+isValid() --> false
 isValid("1Ag_") --> false 
 isValid("123456Je") --> false 
 isValid("123456y_") --> false 
@@ -15,5 +16,8 @@ describe("Entering a password", function(){
   });
   it("should be false when Null", function(){
     expect(isValid(null)).toBeFalsy();
+  });
+  it("should be false whe nothing passed", function(){
+    expect(isValid()).toBeFalsy();
   });
 });
