@@ -8,6 +8,9 @@ function isValid(password){
   else if (typeof(password) === "undefined") {
     return false;
   }
+ else if (password.length < 6) {
+    return false;
+  }
   else {
   	return true;
   }
