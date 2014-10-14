@@ -13,4 +13,7 @@ describe("Entering a password", function(){
   it("should be false when empty string", function(){
     expect(isValid("")).toBeFalsy();
   });
+  it("should be false when Null", function(){
+    expect(isValid(null)).toBeFalsy();
+  });
 });
