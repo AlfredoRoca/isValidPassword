@@ -6,6 +6,7 @@ isValid("1Ag_") --> false
 isValid("123456Je") --> false 
 isValid("123456y_") --> false 
 isValid("_JYhgyQ") --> false 
+
 isValid("_JYKR23Q") --> false 
 isValid("123456yQ_") --> true
 */
@@ -28,5 +29,8 @@ describe("Entering a password", function(){
   });
   it("should be not valid if there is no capital letter", function(){
     expect(isValid("123456y_")).toBeFalsy();
+  });
+  it("should be not valid if there is no number", function(){
+    expect(isValid("_JYhgyQ")).toBeFalsy();
   });
 });
